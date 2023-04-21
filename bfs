@@ -15,10 +15,13 @@ class Solution {
                 TreeNode cur = q.poll();
                 ans.add(cur.value);
                 if(cur.left!= null){
+                    q.offer(cur.left);
+                }
+                if(cur.right!= null){
                     q.offer(cur.right);
                 }
-            }
-            res.add(ans)
+            }//
+            res.add(ans);
         }
         return res;
 }
